@@ -11,7 +11,9 @@ jobs :
 
     steps :
       - name : Dîtes bonjour
-        run : echo "Hello, World ^^"
+        run : |
+          echo "Hello, World ^^"
+          echo "Hello, les poeple"
   
   Hello-space :
     runs-on : ubuntu-latest
