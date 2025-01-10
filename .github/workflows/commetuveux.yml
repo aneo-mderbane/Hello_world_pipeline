@@ -10,6 +10,8 @@ jobs :
     runs-on : ubuntu-latest
 
     steps :
+      - name: Checkout code
+        uses: actions/checkout@v3
       - name : Dîtes bonjour
         run : |
           echo "Hello, World ^^"
@@ -19,5 +21,20 @@ jobs :
     runs-on : ubuntu-latest
 
     steps :
+      - name: Checkout code
+        uses: actions/checkout@v3
       - name : Dîtes Nasa
         run : echo "L'homme n'a jamais mit le pied sur la Lune"
+
+  Hello-python :
+    runs-on : ubuntu-latest
+
+    steps :
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name : ls
+        run : ls
+      - name : Dîtes python
+        run : |
+          ls
+          python3 print_hello.py
