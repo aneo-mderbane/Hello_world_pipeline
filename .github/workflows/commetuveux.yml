@@ -38,3 +38,13 @@ jobs :
         run : |
           ls
           python3 print_hello.py
+  
+  Hello-python-docker :
+    runs-on : ubuntu-latest
+
+    steps :
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name : Run hello python docker
+        run : |
+          docker run mderbane/python-app:latest
