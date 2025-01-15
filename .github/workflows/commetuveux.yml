@@ -48,3 +48,16 @@ jobs :
       - name : Run hello python docker
         run : |
           docker run mderbane/python-app:latest
+
+  Hello-python-docker-build :
+    runs-on : ubuntu-latest
+
+    steps :
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name : build docker
+        run : |
+          docker build -t mderbane/python-app:latest .
+      - name : Run hello python docker
+        run : |
+          docker run mderbane/python-app:latest
